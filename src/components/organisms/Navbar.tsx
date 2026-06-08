@@ -87,18 +87,32 @@ export const Navbar = () => {
                     event.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="group font-['DM_Mono'] text-[0.7rem] xl:text-[0.75rem] tracking-[0.1em] uppercase relative pb-2"
-                  style={{ fontWeight: 300, color: 'var(--muted)' }}
+                  className="group font-['DM_Mono'] text-[0.7rem] xl:text-[0.75rem] tracking-[0.1em] uppercase relative px-2 pb-2"
+                  style={{ fontWeight: 300 }}
                   transition={{ duration: 0.3 }}
                   initial="rest"
                   animate="rest"
                   whileHover="hover"
                   variants={{
-                    rest: { color: 'var(--muted)' },
-                    hover: { color: 'var(--gold-main)' }
+                    rest: { color: 'var(--muted)', y: 0 },
+                    hover: {
+                      color: 'var(--gold-main)',
+                      y: -1,
+                      textShadow: '0 0 18px rgba(244, 208, 111, 0.22)'
+                    }
                   }}
                 >
+                  <motion.div
+                    className="absolute inset-x-0 top-1/2 h-8 -translate-y-1/2 rounded-full"
+                    style={{ background: 'rgba(244, 208, 111, 0.08)' }}
+                    variants={{
+                      rest: { opacity: 0, scale: 0.92 },
+                      hover: { opacity: 1, scale: 1 }
+                    }}
+                    transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                  />
                   <motion.span
+                    className="relative z-10 inline-block"
                     variants={{
                       rest: { opacity: 0.86 },
                       hover: { opacity: 1 }
@@ -108,10 +122,10 @@ export const Navbar = () => {
                     {i18n.language === 'es' ? link.labelEs : link.labelEn}
                   </motion.span>
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-[2px] rounded-full origin-left"
+                    className="absolute bottom-0 left-2 right-2 h-[2px] rounded-full origin-left"
                     style={{ background: 'var(--gold-main)' }}
                     variants={{
-                      rest: { scaleX: 0, opacity: 0 },
+                      rest: { scaleX: 0.2, opacity: 0 },
                       hover: { scaleX: 1, opacity: 1 }
                     }}
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
