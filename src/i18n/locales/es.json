@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "role": "FULLSTACK DEVELOPER",
+    "tagline": "Construyo experiencias.",
+    "stack": "React · TypeScript · Three.js · R3F · Python · Laravel · PostgreSQL",
+    "scroll": "Desplazar"
+  },
+  "projects": {
+    "title": "Trabajos seleccionados",
+    "viewCase": "Explorar"
+  },
+  "technologies": {
+    "title": "Stack técnico",
+    "subtitle": "Herramientas que uso para construir experiencias inmersivas y productos escalables",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "immersive": "Immersive",
+      "devops": "DevOps"
+    }
+  },
+  "origin": {
+    "title": "Origen",
+    "quote": "Prefiero ser un cyborg que una diosa. -Donna Haraway",
+    "body": "Vengo de la danza contemporánea, donde aprendí que el cuerpo también es un sistema. Hoy traduzco esa misma sensibilidad al desarrollo de software, diseñando productos, interfaces y experiencias inmersivas donde la tecnología no solo funciona: comunica, acompaña y transforma."
+  },
+  "process": {
+    "title": "Proceso",
+    "observe": {
+      "title": "OBSERVAR",
+      "intro": "Todo comienza observando.",
+      "points": [
+        "Cómo interactúan las personas.",
+        "Qué necesitan.",
+        "Qué recuerdan.",
+        "Qué las hace volver."
+      ]
+    },
+    "design": {
+      "title": "DISEÑAR",
+      "intro": "Diseño sistemas donde la emoción y la lógica pueden coexistir.",
+      "description": "Convierto observaciones en experiencias, interfaces y decisiones de producto."
+    },
+    "build": {
+      "title": "CONSTRUIR",
+      "intro": "Transformo esas ideas en software real.",
+      "description": "Productos fullstack, plataformas escalables y experiencias inmersivas construidas para ser utilizadas, no solo admiradas."
+    }
+  },
+  "contact": {
+    "title": "Hablemos",
+    "email": "ruthdanielaaguirre@gmail.com",
+    "github": "github.com/RuthDanielaAguirre",
+    "linkedin": "linkedin.com/in/ruth-daniela-aguirre"
+  }
+}

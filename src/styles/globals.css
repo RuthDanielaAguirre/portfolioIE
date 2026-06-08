@@ -1,0 +1,104 @@
+/**
+ * Global Utility Classes
+ * Reusable component styles
+ */
+
+/* Text content styling for project case studies */
+.text-content {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-light);
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--color-foreground);
+}
+
+@media (min-width: 640px) {
+  .text-content {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-content {
+    font-size: 1rem;
+  }
+}
+
+/* Glassmorphism utility class */
+.glass {
+  background: var(--glass-background);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+/* Gold gradient text effect */
+.text-gold-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-main),
+    var(--color-gold-light)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition-duration: var(--transition-base);
+  transition-timing-function: var(--easing-default);
+}
+
+.transition-fast {
+  transition-duration: var(--transition-fast);
+  transition-timing-function: var(--easing-default);
+}
+
+.transition-slow {
+  transition-duration: var(--transition-slow);
+  transition-timing-function: var(--easing-default);
+}
+
+/* Animated gold shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    var(--color-gold-light) 50%,
+    transparent 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Glow effect */
+.gold-glow {
+  box-shadow:
+    0 0 20px var(--color-gold-glow),
+    0 0 40px var(--color-gold-glow),
+    inset 0 0 20px var(--color-gold-glow);
+}
+
+/* Elevated card effect */
+.card-elevated {
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 232, 163, 0.2);
+}
+
+/* 3D perspective container */
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}

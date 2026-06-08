@@ -1,0 +1,16 @@
+{
+  "name": "Ruth Daniela Aguirre Portfolio",
+  "short_name": "RDA Portfolio",
+  "description": "Portfolio of Ruth Daniela Aguirre, fullstack developer focused on product, interactive experiences and digital storytelling.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a08",
+  "theme_color": "#0a0a08",
+  "icons": [
+    {
+      "src": "/images/projects/mongame.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

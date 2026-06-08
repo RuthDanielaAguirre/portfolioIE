@@ -1,0 +1,214 @@
+/**
+ * Kintsugi Portfolio Theme
+ * Tailwind CSS v4 Custom Properties
+ * Edit these variables to customize the design system
+ */
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+  --font-size-base: 16px;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-mono: 'DM Mono', monospace;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* ========================================
+     COLOR PALETTE - KINTSUGI THEME
+     ======================================== */
+
+  /* Base Colors */
+  --color-background: #0a0a08;
+  --color-foreground: #f0ece0;
+
+  /* Gold Accent Colors */
+  --color-gold-main: #f4d06f;
+  --color-gold-light: #ffe8a3;
+  --color-gold-shadow: #8f6b2e;
+  --color-gold-glow: rgba(244, 208, 111, 0.32);
+
+  /* Neutral Colors */
+  --color-muted: #a09a8e;
+  --color-muted-foreground: #a09a8e;
+
+  /* ========================================
+     SEMANTIC COLORS
+     ======================================== */
+  --color-primary: var(--color-gold-main);
+  --color-primary-foreground: var(--color-background);
+
+  --color-secondary: rgba(30, 24, 12, 0.38);
+  --color-secondary-foreground: var(--color-foreground);
+
+  --color-accent: var(--color-gold-main);
+  --color-accent-foreground: var(--color-background);
+
+  --color-destructive: #d4183d;
+  --color-destructive-foreground: var(--color-foreground);
+
+  /* ========================================
+     UI ELEMENTS
+     ======================================== */
+  --color-card: rgba(10, 10, 8, 0.78);
+  --color-card-foreground: var(--color-foreground);
+
+  --color-popover: var(--color-background);
+  --color-popover-foreground: var(--color-foreground);
+
+  --color-border: rgba(244, 208, 111, 0.28);
+  --color-input: rgba(244, 208, 111, 0.18);
+  --color-input-background: rgba(30, 24, 12, 0.38);
+  --color-switch-background: rgba(244, 208, 111, 0.18);
+  --color-ring: rgba(244, 208, 111, 0.48);
+
+  /* ========================================
+     SPACING & BORDERS
+     ======================================== */
+  --radius-base: 0.5rem;
+  --radius-sm: calc(var(--radius-base) - 0.25rem);
+  --radius-md: var(--radius-base);
+  --radius-lg: calc(var(--radius-base) + 0.25rem);
+  --radius-xl: calc(var(--radius-base) + 0.5rem);
+
+  /* ========================================
+     GLASSMORPHISM EFFECTS
+     ======================================== */
+  --glass-background: rgba(10, 10, 8, 0.6);
+  --glass-border: rgba(244, 208, 111, 0.3);
+  --glass-blur: 12px;
+
+  /* ========================================
+     TRANSITIONS
+     ======================================== */
+  --transition-fast: 150ms;
+  --transition-base: 250ms;
+  --transition-slow: 400ms;
+  --easing-default: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/**
+ * Tailwind v4 Theme Configuration
+ * Maps CSS custom properties to Tailwind utilities
+ */
+@theme inline {
+  /* Colors */
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+
+  --color-gold-main: var(--color-gold-main);
+  --color-gold-light: var(--color-gold-light);
+  --color-gold-shadow: var(--color-gold-shadow);
+  --color-gold-glow: var(--color-gold-glow);
+
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+
+  --color-destructive: var(--color-destructive);
+  --color-destructive-foreground: var(--color-destructive-foreground);
+
+  --color-card: var(--color-card);
+  --color-card-foreground: var(--color-card-foreground);
+
+  --color-popover: var(--color-popover);
+  --color-popover-foreground: var(--color-popover-foreground);
+
+  --color-border: var(--color-border);
+  --color-input: var(--color-input);
+  --color-input-background: var(--color-input-background);
+  --color-ring: var(--color-ring);
+
+  /* Border Radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  /* Typography */
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
+}
+
+/**
+ * Base Styles
+ * Global HTML element defaults
+ */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-size: var(--font-size-base);
+  }
+
+  html,
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-mono);
+    font-weight: var(--font-weight-light);
+  }
+
+  /* Typography defaults (can be overridden by Tailwind utilities) */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: var(--font-weight-light);
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-family: var(--font-mono);
+    font-weight: var(--font-weight-light);
+    line-height: 1.8;
+  }
+
+  label,
+  button {
+    font-family: var(--font-mono);
+    font-weight: var(--font-weight-regular);
+  }
+
+  input,
+  textarea {
+    font-family: var(--font-mono);
+    font-weight: var(--font-weight-light);
+  }
+}
